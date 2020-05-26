@@ -142,7 +142,7 @@ Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-da
 function spinalCase(str) {
   str = str.replace(/([a-z])([A-Z])/g, "$1 $2"); // Replace low-upper case to low-space-uppercase
 
-  str = str.replace(/\s+/g, "-").toLowerCase(); // Replace space and underscore with -
+  str = str.replace(/\s|_/g, "-").toLowerCase(); // Replace space and underscore with -
 
   return str;
   //------------------------------------------------------//
